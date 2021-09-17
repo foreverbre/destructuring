@@ -15,7 +15,7 @@ let planetFacts = {
 };
 
 let { numPlanets, ...discoveryYears } = planetFacts;
-// {yearNeptuneDiscovered: 1846, yearMarsDiscovered: 1659}
+{yearNeptuneDiscovered: 1846, yearMarsDiscovered: 1659}
 
 /*What does the following code return/print?*/
 
@@ -99,14 +99,14 @@ Write a one line function to make this work using
 An arrow function
 Destructuring
 ‘Enhanced’ object assignment (same key/value shortcut)*/
-//raceResults(["Tom", "Margaret", "Allison", "David", "Pierre"]);
-const raceResults = ([first, second, third, ...rest]) => [
-  { first, second, third, rest },
-];
 
+const raceResults = ([first, second, third, ...rest]) => ({
+  first,
+  second,
+  third,
+  rest,
+});
 raceResults(["Tom", "Margaret", "Allison", "David", "Pierre"]);
-
-raceResults({});
 /*
   {
     first: "Tom",
